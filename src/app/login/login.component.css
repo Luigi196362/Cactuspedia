@@ -1,0 +1,54 @@
+
+button {
+    background-color: #5271FF;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 90px; /* Ajusta el tamaño del botón */
+    border: none;
+    cursor: pointer;
+    font-size: 20px; /* Ajusta el tamaño de la fuente del botón */
+}
+
+.form-group {
+    margin-bottom: 60px; /* Espacio entre los grupos de entrada */
+    font-size: 30px;
+  }
+  
+  label {
+    display: block; /* Hacer que las etiquetas sean bloques */
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+
+    width: 75%; /* Ancho completo del input */
+    padding: 8px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde del input */
+  }
+  
+  .container {
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    width: 80;
+  }
+  
+  .Crear_cuenta {
+    margin-top: 20px;
+    display: flex;
+  }
+
+ .titulo{
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size:70px;
+ }
+
+.forgot{
+  margin-top: 10px;
+  margin-left: 70px;
+  font-size: 15px;
+}

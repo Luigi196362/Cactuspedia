@@ -1,0 +1,70 @@
+.contenedor{
+    margin-top: 90px;
+    text-align: center;
+}
+
+.barra{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 30px;
+    width: 40%;
+    border-color: black;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.boton_buscar{
+    border-left-color: none;
+    border-right-color: black;
+    border-top-color: black;
+    border-bottom-color: black;
+    background-color: #5271FF;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 36px;
+    
+    color: white;
+
+}
+
+.imagenes {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Envolver elementos en filas */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+
+
+.planta{
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-inline: 20px;
+    height: auto;
+    width: auto;
+    max-width: 200px;
+    max-height:auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background-color: #FF914D;
+    text-align: center;
+    color:white;
+    font-size: 30px;
+}
+
+img {
+    border-color: white;
+    border-width: 3px;
+    border-style: solid; /* Necesario para que el borde se muestre */
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,53 @@
+/* Estilos para el encabezado */
+nav {
+    background-color: #00BF63;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    max-width: 100%;
+    padding-right: 20px; /* Añadir espacio a la derecha para evitar superposición con el scroll */   
+}
+
+h1 {
+    
+    color: white;
+    margin: 0;
+    font-size: 40px; /* Ajusta el tamaño de la fuente del nombre de la página */
+    text-decoration: none; /* Elimina el subrayado del nombre de la página */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.button-primary {
+    background-color: #5271FF;
+    color: white;
+    border-radius: 20px;
+    padding: 12px 24px; /* Ajusta el tamaño del botón */
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Ajusta el tamaño de la fuente del botón */
+}
+
+a {
+    
+    color:#5271FF
+ }
