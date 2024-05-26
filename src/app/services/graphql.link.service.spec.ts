@@ -1,48 +1,16 @@
-import { Injectable } from '@angular/core';
-import { Apollo, gql } from 'apollo-angular';
-import { HttpHeaders } from '@angular/common/http';
+import { TestBed } from '@angular/core/testing';
 
-const LINKS_QUERY = gql`
-  query FakeLinks  {
-    links  {
-        id
-        url
-        description
-      }
-  }
-`;
+import { GraphqlLinkService } from './graphql.link.service';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class GraphqlLinkService {
+describe('GraphqlLinkService', () => {
+  let service: GraphqlLinkService;
 
-  constructor(private apollo: Apollo) { }
+  beforeEach(() => {
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(GraphqlLinkService);
+  });
 
-  getLinks() {
-    
-      return this.apollo.query({
-        query: LINKS_QUERY,
-        variables: {
-        }, 
-        context: {
-          // example of setting the headers with context per operation
-          // headers: new HttpHeaders().set('Authorization', 'JWT ' + mytoken),
-        },
-      });
-    //}
-  
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-}
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+});
