@@ -11,6 +11,11 @@ import { PlantDetailsComponent } from './plant-details/plant-details.component';
 import { HomeComponent } from './home/home.component';
 import { ShopComponent } from './shop/shop.component';
 import { GamesComponent } from './games/games.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { PublicationDetailsComponent } from './publication-details/publication-details.component';
+import { GamePageComponent } from './game-page/game-page.component';
+import { IaChatComponent } from './ia-chat/ia-chat.component';
+import { SubscriptionPageComponent } from './subscription-page/subscription-page.component';
 
 
 export const routes: Routes = [
@@ -23,8 +28,13 @@ export const routes: Routes = [
   { path: 'fake', component: FakePlantComponent },
   { path: 'plant-details', component: PlantDetailsComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'shop', component:ShopComponent},
-  { path: 'games', component:GamesComponent}
+  { path: 'shop', component: ShopComponent },
+  { path: 'games', component: GamesComponent },
+  { path: 'product-details', component: ProductDetailsComponent },
+  { path: 'publication-details', component: PublicationDetailsComponent },
+  { path: 'game-page', component: GamePageComponent },
+  { path: 'ia-chat',component:IaChatComponent },
+  { path: 'subscription-page',component:SubscriptionPageComponent }
 
 ];
 @NgModule({

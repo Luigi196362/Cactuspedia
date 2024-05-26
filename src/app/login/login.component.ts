@@ -4,6 +4,7 @@ import { UserService } from '../services/user.service';
 import { FormsModule } from '@angular/forms';
 import { Token } from '../models/user/Token';
 import { Credential } from '../models/user/Credential';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-login',
@@ -13,27 +14,39 @@ import { Credential } from '../models/user/Credential';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  constructor(private userService:UserService,
-    private router:Router
-  ){}
-  
-  email:string ="luis@gmail.com";
-  password:string ="123";
-  myLogin= new Token();
 
-  callLogin(){
-    //alert("Login ...")
-    var myCredential = new Credential();
-    myCredential.email= this.email;
-    myCredential.password = this.password;
+  constructor( private userService: UserService,
+               private storageService : StorageService,
+         private router: Router
+  ) 
+  { } 
+
+  username : String = "";
+  password : String = "";
+  myCredential = new Credential();
+
+  callLogin() {
+
+    
+   this.myCredential.username = this.username;
+   this.myCredential.password = this.password;
+
+   this.userService.tokenAuth(this.myCredential)
+  .subscribe(({ data }) => {
+     console.log('user logged: ', JSON.stringify(data));
+     this.storageService.setSession("user", this.myCredential.username);
+     this.storageService.setSession("token", JSON.parse(JSON.stringify(data)).tokenAuth.token);
+
+     this.router.navigate(['/home']);
+
+  }, (error) => {
+     console.log('there was an error sending the query', error);
+     this.myCredential.username = "";
+     this.myCredential.password = "";
+     alert(error);
+    });
 
 
-    this.myLogin=this.userService.postLogin(
-      myCredential
-    );
-    if (this.myLogin.token!="")
-      this.router.navigate(['/home']);
 
-    console.log(this.myLogin);
-  }
+  } 
 }

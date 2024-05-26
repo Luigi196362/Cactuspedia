@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-shop',
+  selector: 'app-game-page',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './shop.component.html',
-  styleUrl: './shop.component.css'
+  templateUrl: './game-page.component.html',
+  styleUrl: './game-page.component.css'
 })
-export class ShopComponent {
+export class GamePageComponent {
 
 }

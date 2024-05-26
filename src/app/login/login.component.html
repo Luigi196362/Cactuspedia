@@ -3,8 +3,8 @@
     <form>
 
         <div class="form-group">
-            <label for="correo">Correo electronico:</label>
-            <input type="text" id="correo" [(ngModel)]="email" name="email" >
+            <label for="correo">Nombre de usuario:</label>
+            <input type="text" id="correo" [(ngModel)]="username" name="email" >
         </div>
 
 
@@ -16,9 +16,7 @@
                 <label class="forgot">¿Olvidaste tu contraseña?</label>
             </a>
 
-            <label>{{myLogin.id}}</label>
-            <label>{{myLogin.token}}</label>
-            <label>{{myLogin.user}}</label>
+            <label>{{myCredential.username}}</label>
             
         </div>
 

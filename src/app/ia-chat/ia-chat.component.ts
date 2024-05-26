@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-shop',
+  selector: 'app-ia-chat',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './shop.component.html',
-  styleUrl: './shop.component.css'
+  templateUrl: './ia-chat.component.html',
+  styleUrl: './ia-chat.component.css'
 })
-export class ShopComponent {
+export class IaChatComponent {
 
 }

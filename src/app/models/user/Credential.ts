@@ -1,4 +1,4 @@
-export class Credential{
-    email: String = "";
+export class Credential {
+    username: String = "";
     password: String = "";
 }

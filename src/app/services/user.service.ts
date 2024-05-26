@@ -2,27 +2,57 @@ import { Injectable } from '@angular/core';
 import { Credential } from '../models/user/Credential'
 import { User } from '../models/user/User'
 import { Token } from '../models/user/Token'
+import {Apollo, gql} from 'apollo-angular';
+
+const TOKENAUTH = gql`
+  mutation TokenAuth($username: String!, $password: String!) {
+    tokenAuth(username: $username, password: $password) {
+      token
+    }
+  }
+`;
+
+const CREATEUSER = gql`
+  mutation CreateUser($username: String!, $email: String!, $password: String!) {
+    createUser(username: $username, email: $email, password: $password) {
+      user { 
+        id
+        username
+        email
+      }
+    }
+  }
+  `;
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor() { }
+  constructor(private apollo: Apollo) { }
 
-  postLogin(myCredential: Credential): Token {
+  tokenAuth(myCredential: Credential) {
 
-    console.log("email ... " + myCredential.email);
+    console.log("username ... " + myCredential.username);
     console.log("password ... " + myCredential.password);
 
     var myToken = new Token();
 
-    // call fake api
-    if ( (myCredential.email == "luis@gmail.com") &&
+    // call api
+
+    return this.apollo.mutate({
+      mutation: TOKENAUTH,
+      variables: {
+        username: myCredential.username,
+        password: myCredential.password
+      }
+    });
+
+/*    if ( (myCredential.email == "adsoft@live.com.mx") &&
 	 (myCredential.password == "123"))
     {
        myToken.id = "0001";
-       myToken.user = "luis";
+       myToken.user = "adsoft";
        myToken.token = "gcp747844sdjksdkjsdkjds895850vb3";
     }
     else {
@@ -30,40 +60,25 @@ export class UserService {
        myToken.user = "bad credentials";
        myToken.token = "";
     }  
-
-    return myToken;
+*/
+   //  return myToken;
   }
 
 
-  createUser(myUser: User): User {
+  createUser(myUser: User) {
 
     console.log("email ... " + myUser.email);
     console.log("password ... " + myUser.password);
 
-    var myNewUser = new User();
+    return this.apollo.mutate({
+        mutation: CREATEUSER,
+        variables: {
+          username: myUser.username,
+          email: myUser.email,
+          password: myUser.password
+        }
+    });
 
-    // call fake api - create user
-    // Success
-    myNewUser.id = 1;
-
-    
-    if ( myNewUser.id != 0 )
-    {
-       console.log("Success " + myNewUser.id);
-       myNewUser.id = 1; // Success
-       myNewUser.email = myUser.email;
-       myNewUser.firstName = myUser.firstName;
-       myNewUser.lastName = myUser.lastName;
-       myNewUser.password = myUser.password;
-
-    }
-    else {
-       console.log("Error" + myNewUser.id);
-
-       myNewUser.id = 0; // Error
-    } 
-
-   return myNewUser;
  } 
 
 
@@ -131,7 +146,7 @@ export class UserService {
 
   createTokenReset(email: String) : String {
     // JWT create a token to encrypt email
-    var SECRET_KEY = "hello";
+    var SECRET_KEY = "cactus";
 
     var myToken = "lkjlskiei8093wjdjde9203394"
 
@@ -151,8 +166,7 @@ export class UserService {
        console.log("Success " + myUser.id);
        myUser.id = 1; // Success
        myUser.email = email;
-       myUser.firstName = "Luis";
-       myUser.lastName = "Romero";
+       myUser.username = "luis";
        myUser.password = "";
     }
     else {
