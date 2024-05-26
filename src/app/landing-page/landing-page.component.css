@@ -1,13 +1,9 @@
-
-  
+/*
   label {
-    display: block; /* Hacer que las etiquetas sean bloques */
+    display: block; 
   }
   
-  a {
-    
-    color:#5271FF
- }
+
 
  .eslogan{
     margin-top: 150px;
@@ -31,8 +27,8 @@
     color: white;
     margin: 40px;
     background-color: purple;
-    text-align: center; /* Centra el texto horizontalmente */
-    line-height: 30px; /* Centra el texto verticalmente */
+    text-align: center;
+    line-height: 30px; 
 }
 
 .terminos {
@@ -53,4 +49,78 @@ img{
     margin-top: 5px;
     height: 20%;
     width: 20%;
+}
+*/
+.container {
+    display: flex;
+    justify-content: space-between ;
+    margin-left: 200px;
+    margin-right: 200px;
+    align-items: center;
+}
+
+.eslogan {
+    max-width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.subtitulo{
+    font-size: 50PX;
+}
+.Logo {
+    width: 100%;
+    height: 100%;
+}
+
+.divLogo{
+    width: 35%;
+    height  : auto;
+}
+
+.comentarios{
+    display: flex;
+    height: 100px;
+    justify-content: space-between ;
+    margin-left: 200px;
+    margin-right: 200px;
+    align-items: center;
+    /*background-color:orange;*/
+    ;
+}
+
+.comentario{
+    background-color: rgb(227, 183, 121);
+    width: 200PX;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 10px;
+}
+
+.comentario:hover{
+    transform: scale(1.1); 
+}
+
+.nombre{
+    margin-top: 10%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display:flex;
+    align-items: center;
+}
+
+.icono{
+    width: 50px;
+}
+
+.mensaje{
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+.terminos{
+    font-weight: bolder;
+    position: absolute;
+    bottom: 0;
 }

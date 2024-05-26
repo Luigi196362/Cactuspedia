@@ -1,8 +1,8 @@
-
+<!--
 <nav>
   <div class="header-container">
     <a class="cactuspedia" routerLink="/">
-    <h1>Cactuspedia</h1>
+    <h1>{{title}}</h1>
     </a>
     <ul>
       <li>
@@ -19,9 +19,29 @@
         <a routerLink="/home">
         <button class="button-primary">home</button>
       </a>
-      </li>
+    </li>
     </ul>
   </div>
+</nav>-->
+
+
+<nav>
+  <div class="container">
+    <a class="cactuspedia" routerLink="/">
+      <h1>{{title}}</h1>
+    </a>
+    <div class="botones">
+        <button class="boton" routerLink="/login">Iniciar sesión</button>
+        <button class="boton" routerLink="/new-user">Crear cuenta</button>
+        <button class="boton" routerLink="/home">home</button>
+        
+      <!--<a routerLink="/home">
+        <button class="boton">home</button>
+      </a>-->
+    </div>
+  </div>
 </nav>
+
+
 
 <router-outlet></router-outlet>

@@ -1,14 +1,3 @@
-
-button {
-    background-color: #5271FF;
-    color: white;
-    border-radius: 20px;
-    padding: 6px 90px; /* Ajusta el tamaño del botón */
-    border: none;
-    cursor: pointer;
-    font-size: 20px; /* Ajusta el tamaño de la fuente del botón */
-}
-
 .form-group {
     margin-bottom: 60px; /* Espacio entre los grupos de entrada */
     font-size: 30px;
@@ -26,7 +15,7 @@ button {
     border-radius: 5px; /* Bordes redondeados */
     border: 1px solid #ccc; /* Borde del input */
   }
-  
+
   .container {
     font-weight: bolder;
     text-align: center;

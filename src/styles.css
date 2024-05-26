@@ -1,9 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
 
-body{margin-top: 70px;}
-
-.cactuspedia {
-   text-decoration: none;
+body {
+   margin-top: 12vh;
+   background-color: #eaeee0;
+   color: #000;
+   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.titulo {
+   color: #3b5040;
+}
+
+.subtitulo {
+   color: #3f5344;
+}
+
+button {
+   min-height: 40px;
+   ;
+   border-radius: 10px;
+   border: none;
+   background-color: #597560;
+   color: white;
+}
+
+button:hover {
+   background-color: #394c3e;
+   transform: scale(1.1);
+}
+
+button:active {
+   transform: scale(1);
+}
+
+a {
+   color: #5271FF;
+}
+
+@keyframes hover {
+   40% {
+      transform: scale(0.8);
+   }
+
+   100% {
+      transform: scale(1.1);
+   }
+}
+
+/*
+:root{
+color-scheme:  light dark;
+}
+*/

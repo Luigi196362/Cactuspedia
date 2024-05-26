@@ -1,0 +1,195 @@
+[
+   {
+      "id": "1",
+      "imagen": "https://th.bing.com/th/id/R.bfd15ccff757381a7ef50cbf1481a539?rik=ZJ%2fUzWcg8peKDw&pid=ImgRaw&r=0",
+      "nombre": "Echeveria",
+      "tipo": "Suculenta",
+      "origen": "América Central y América del Sur",
+      "descripcion": "Las echeverias son plantas suculentas con hojas carnosas que forman rosetas. Son populares en jardinería por su belleza y resistencia."
+   },
+   {
+      "id": "2",
+      "imagen": "https://th.bing.com/th/id/OIP.u4b2kY1MiyXb-gQtOWi5hQAAAA?rs=1&pid=ImgDetMain",
+      "nombre": "Opuntia",
+      "tipo": "Cactus",
+      "origen": "América",
+      "descripcion": "Las opuntias, también conocidas como nopal, son cactus con segmentos planos y ovalados que se unen para formar tallos. Son apreciadas tanto por sus frutos comestibles como por su resistencia a la sequía."
+   },
+   {
+      "id": "3",
+      "imagen": "https://th.bing.com/th/id/OIP.pTjZmNTL0ojuBHcez8z1XAHaE8?rs=1&pid=ImgDetMain",
+      "nombre": "Aloe Vera",
+      "tipo": "Suculenta",
+      "origen": "África",
+      "descripcion": "El aloe vera es una planta suculenta conocida por sus propiedades medicinales. Tiene hojas carnosas y puntiagudas que contienen un gel utilizado para tratar quemaduras y otras afecciones de la piel."
+   },
+   {
+      "id": "4",
+      "imagen": "https://th.bing.com/th/id/R.ff7dcc8520ff1d10fae0f6980965487d?rik=qWvvyuud%2fhGlcg&pid=ImgRaw&r=0",
+      "nombre": "Mammillaria",
+      "tipo": "Cactus",
+      "origen": "América",
+      "descripcion": "Las mammillarias son cactus pequeños con espinas blancas o amarillas y flores de colores brillantes. Son ideales para cultivar en macetas debido a su tamaño compacto."
+   },
+   {
+      "id": "5",
+      "imagen": "https://th.bing.com/th/id/R.110b0ec4e639fb94f54893de1086094b?rik=fgoofoVCPs34KA&pid=ImgRaw&r=0",
+      "nombre": "Sedum",
+      "tipo": "Suculenta",
+      "origen": "Europa, Asia, África y América",
+      "descripcion": "Los sedum, también conocidos como 'siempreviva', son suculentas que forman matas o pequeñas plantas. Tienen hojas carnosas y flores en forma de estrella que atraen a las abejas y mariposas."
+   },
+   {
+      "id": "6",
+      "imagen": "https://th.bing.com/th/id/R.860df243134dbdb0c7c0326c142fe0d2?rik=hU0PzVOwU%2bbsqA&pid=ImgRaw&r=0",
+      "nombre": "Haworthia",
+      "tipo": "Suculenta",
+      "origen": "África del Sur",
+      "descripcion": "Las haworthias son suculentas que forman rosetas de hojas carnosas y translúcidas. Son ideales para interiores debido a su tamaño compacto y su resistencia a condiciones de poca luz."
+    },
+    {
+      "id": "7",
+      "imagen": "https://th.bing.com/th/id/OIP.cKe5o_fGWTHqJs5tNTr1ywHaFj?rs=1&pid=ImgDetMain",
+      "nombre": "Sempervivum",
+      "tipo": "Suculenta",
+      "origen": "Europa y Asia",
+      "descripcion": "Los sempervivum, conocidos como 'siemprevivas', forman rosetas de hojas carnosas y puntiagudas. Son resistentes a condiciones adversas y se propagan fácilmente, formando colinas densas de plantas."
+    },
+    {
+      "id": "8",
+      "imagen": "https://th.bing.com/th/id/R.9b5a2d508f9b17d5e101353743c8b678?rik=wUfLAk0Hesq1gA&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2f8%2f84%2fAgave_victoriae-reginae_lv_2.jpg&ehk=jsJ6BZUKi5gay0w%2fQLbtRZUdNAuNnL%2f5XqyjpS6KCAU%3d&risl=&pid=ImgRaw&r=0",
+      "nombre": "Agave",
+      "tipo": "Suculenta",
+      "origen": "América",
+      "descripcion": "Los agaves son suculentas con hojas gruesas y puntiagudas dispuestas en rosetas. Algunas especies, como el agave azul, se utilizan para la producción de tequila."
+    },
+    {
+      "id": "9",
+      "imagen": "https://th.bing.com/th/id/R.12123b3558efd43ed47a22d54e4a3932?rik=7gLFXot75mCJ0g&riu=http%3a%2f%2f2.bp.blogspot.com%2f-ICI3TyF8xRE%2fVVS49rpk2wI%2fAAAAAAAABN0%2fq4PQuvLT6us%2fs1600%2fAeonium-arboreum-2.jpg&ehk=5iANNB5FIX0ZSDTiR40o7PW6bKmWOEnvAVjoazPDFgk%3d&risl=&pid=ImgRaw&r=0",
+      "nombre": "Aeonium",
+      "tipo": "Suculenta",
+      "origen": "Islas Canarias y África",
+      "descripcion": "Los aeoniums son suculentas con rosetas de hojas carnosas dispuestas en tallos gruesos. Son apreciadas por su belleza ornamental y vienen en una variedad de formas y colores."
+    },
+    {
+      "id": "10",
+      "imagen": "https://th.bing.com/th/id/R.7e82c05d38025a775bd1837b39f46cc1?rik=oC1dlrDE9LC%2fAA&pid=ImgRaw&r=0",
+      "nombre": "Ferocactus",
+      "tipo": "Cactus",
+      "origen": "América del Norte y América Central",
+      "descripcion": "Los ferocactus son cactus grandes y cilíndricos con espinas prominentes y flores de colores brillantes. Son ideales para jardines de xeriscape debido a su resistencia a la sequía."
+    },
+    {
+      "id": "11",
+      "imagen": "https://th.bing.com/th/id/R.55f112f79952758033ff0396c2b27921?rik=y7Qpyot%2ffyl7Tg&pid=ImgRaw&r=0",
+      "nombre": "Crassula",
+      "tipo": "Suculenta",
+      "origen": "África y Madagascar",
+      "descripcion": "Las crassulas son suculentas con hojas gruesas dispuestas en forma de roseta o en tallos suculentos. Son populares como plantas de interior debido a su facilidad de cuidado y variedad de formas."
+    },
+    {
+      "id": "12",
+      "imagen": "https://th.bing.com/th/id/R.60b08f79a53365da00ec06d69f68ad1c?rik=qhIHSsmwvM%2bmFA&pid=ImgRaw&r=0",
+      "nombre": "Gasteria",
+      "tipo": "Suculenta",
+      "origen": "África del Sur",
+      "descripcion": "Las gasterias son suculentas con hojas carnosas dispuestas en rosetas. Son resistentes y fáciles de cuidar, ideales para principiantes en jardinería."
+    },  
+    {
+      "id": "1",
+      "imagen": "https://th.bing.com/th/id/R.bfd15ccff757381a7ef50cbf1481a539?rik=ZJ%2fUzWcg8peKDw&pid=ImgRaw&r=0",
+      "nombre": "Echeveria",
+      "tipo": "Suculenta",
+      "origen": "América Central y América del Sur",
+      "descripcion": "Las echeverias son plantas suculentas con hojas carnosas que forman rosetas. Son populares en jardinería por su belleza y resistencia."
+   },
+   {
+      "id": "2",
+      "imagen": "https://th.bing.com/th/id/OIP.u4b2kY1MiyXb-gQtOWi5hQAAAA?rs=1&pid=ImgDetMain",
+      "nombre": "Opuntia",
+      "tipo": "Cactus",
+      "origen": "América",
+      "descripcion": "Las opuntias, también conocidas como nopal, son cactus con segmentos planos y ovalados que se unen para formar tallos. Son apreciadas tanto por sus frutos comestibles como por su resistencia a la sequía."
+   },
+   {
+      "id": "3",
+      "imagen": "https://th.bing.com/th/id/OIP.pTjZmNTL0ojuBHcez8z1XAHaE8?rs=1&pid=ImgDetMain",
+      "nombre": "Aloe Vera",
+      "tipo": "Suculenta",
+      "origen": "África",
+      "descripcion": "El aloe vera es una planta suculenta conocida por sus propiedades medicinales. Tiene hojas carnosas y puntiagudas que contienen un gel utilizado para tratar quemaduras y otras afecciones de la piel."
+   },
+   {
+      "id": "4",
+      "imagen": "https://th.bing.com/th/id/R.ff7dcc8520ff1d10fae0f6980965487d?rik=qWvvyuud%2fhGlcg&pid=ImgRaw&r=0",
+      "nombre": "Mammillaria",
+      "tipo": "Cactus",
+      "origen": "América",
+      "descripcion": "Las mammillarias son cactus pequeños con espinas blancas o amarillas y flores de colores brillantes. Son ideales para cultivar en macetas debido a su tamaño compacto."
+   },
+   {
+      "id": "5",
+      "imagen": "https://th.bing.com/th/id/R.110b0ec4e639fb94f54893de1086094b?rik=fgoofoVCPs34KA&pid=ImgRaw&r=0",
+      "nombre": "Sedum",
+      "tipo": "Suculenta",
+      "origen": "Europa, Asia, África y América",
+      "descripcion": "Los sedum, también conocidos como 'siempreviva', son suculentas que forman matas o pequeñas plantas. Tienen hojas carnosas y flores en forma de estrella que atraen a las abejas y mariposas."
+   },
+   {
+      "id": "6",
+      "imagen": "https://th.bing.com/th/id/R.860df243134dbdb0c7c0326c142fe0d2?rik=hU0PzVOwU%2bbsqA&pid=ImgRaw&r=0",
+      "nombre": "Haworthia",
+      "tipo": "Suculenta",
+      "origen": "África del Sur",
+      "descripcion": "Las haworthias son suculentas que forman rosetas de hojas carnosas y translúcidas. Son ideales para interiores debido a su tamaño compacto y su resistencia a condiciones de poca luz."
+    },
+    {
+      "id": "7",
+      "imagen": "https://th.bing.com/th/id/OIP.cKe5o_fGWTHqJs5tNTr1ywHaFj?rs=1&pid=ImgDetMain",
+      "nombre": "Sempervivum",
+      "tipo": "Suculenta",
+      "origen": "Europa y Asia",
+      "descripcion": "Los sempervivum, conocidos como 'siemprevivas', forman rosetas de hojas carnosas y puntiagudas. Son resistentes a condiciones adversas y se propagan fácilmente, formando colinas densas de plantas."
+    },
+    {
+      "id": "8",
+      "imagen": "https://th.bing.com/th/id/R.9b5a2d508f9b17d5e101353743c8b678?rik=wUfLAk0Hesq1gA&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2f8%2f84%2fAgave_victoriae-reginae_lv_2.jpg&ehk=jsJ6BZUKi5gay0w%2fQLbtRZUdNAuNnL%2f5XqyjpS6KCAU%3d&risl=&pid=ImgRaw&r=0",
+      "nombre": "Agave",
+      "tipo": "Suculenta",
+      "origen": "América",
+      "descripcion": "Los agaves son suculentas con hojas gruesas y puntiagudas dispuestas en rosetas. Algunas especies, como el agave azul, se utilizan para la producción de tequila."
+    },
+    {
+      "id": "9",
+      "imagen": "https://th.bing.com/th/id/R.12123b3558efd43ed47a22d54e4a3932?rik=7gLFXot75mCJ0g&riu=http%3a%2f%2f2.bp.blogspot.com%2f-ICI3TyF8xRE%2fVVS49rpk2wI%2fAAAAAAAABN0%2fq4PQuvLT6us%2fs1600%2fAeonium-arboreum-2.jpg&ehk=5iANNB5FIX0ZSDTiR40o7PW6bKmWOEnvAVjoazPDFgk%3d&risl=&pid=ImgRaw&r=0",
+      "nombre": "Aeonium",
+      "tipo": "Suculenta",
+      "origen": "Islas Canarias y África",
+      "descripcion": "Los aeoniums son suculentas con rosetas de hojas carnosas dispuestas en tallos gruesos. Son apreciadas por su belleza ornamental y vienen en una variedad de formas y colores."
+    },
+    {
+      "id": "10",
+      "imagen": "https://th.bing.com/th/id/R.7e82c05d38025a775bd1837b39f46cc1?rik=oC1dlrDE9LC%2fAA&pid=ImgRaw&r=0",
+      "nombre": "Ferocactus",
+      "tipo": "Cactus",
+      "origen": "América del Norte y América Central",
+      "descripcion": "Los ferocactus son cactus grandes y cilíndricos con espinas prominentes y flores de colores brillantes. Son ideales para jardines de xeriscape debido a su resistencia a la sequía."
+    },
+    {
+      "id": "11",
+      "imagen": "https://th.bing.com/th/id/R.55f112f79952758033ff0396c2b27921?rik=y7Qpyot%2ffyl7Tg&pid=ImgRaw&r=0",
+      "nombre": "Crassula",
+      "tipo": "Suculenta",
+      "origen": "África y Madagascar",
+      "descripcion": "Las crassulas son suculentas con hojas gruesas dispuestas en forma de roseta o en tallos suculentos. Son populares como plantas de interior debido a su facilidad de cuidado y variedad de formas."
+    },
+    {
+      "id": "12",
+      "imagen": "https://th.bing.com/th/id/R.60b08f79a53365da00ec06d69f68ad1c?rik=qhIHSsmwvM%2bmFA&pid=ImgRaw&r=0",
+      "nombre": "Gasteria",
+      "tipo": "Suculenta",
+      "origen": "África del Sur",
+      "descripcion": "Las gasterias son suculentas con hojas carnosas dispuestas en rosetas. Son resistentes y fáciles de cuidar, ideales para principiantes en jardinería."
+    }  
+   
+]

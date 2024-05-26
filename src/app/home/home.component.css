@@ -1,70 +1,160 @@
-.contenedor{
-    margin-top: 90px;
-    text-align: center;
-}
+.home {}
 
-.barra{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    height: 30px;
-    width: 40%;
-    border-color: black;
-    padding-right: 10px;
-    padding-left: 10px;
-}
+.social {
 
-.boton_buscar{
-    border-left-color: none;
-    border-right-color: black;
-    border-top-color: black;
-    border-bottom-color: black;
-    background-color: #5271FF;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    height: 36px;
-    
-    color: white;
-
-}
-
-.imagenes {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap; /* Envolver elementos en filas */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
-}
-
-
-
-.planta{
-    border-radius: 10px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-inline: 20px;
-    height: auto;
-    width: auto;
-    max-width: 200px;
-    max-height:auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    background-color: #FF914D;
-    text-align: center;
-    color:white;
-    font-size: 30px;
-}
-
-img {
-    border-color: white;
-    border-width: 3px;
-    border-style: solid; /* Necesario para que el borde se muestre */
-    border-radius: 5px;
-    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
+
     width: 50%;
-    height: 50%;
+}
+
+.actions {
+    /*    border-right: 4px solid rgb(255, 255, 255);*/
+    left: 0;
+    width: 20%;
+    position: fixed;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pages-section {
+
+    right: 0;
+    width: 20%;
+    position: fixed;
+    height: 85%;
+    text-align: center;
+}
+
+.pages {
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.img-pages {
+    height: 60%;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+
+
+
+.botonPages {
+    margin: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+    height: 15%;
+}
+
+
+.publicacion-img {
+    border-radius: 100%;
+    width: 50px;
+}
+
+.publicacion {
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color: rgb(255, 241, 216);
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.publicacion:hover{
+    transform: scale(1.01);
+}
+
+.publicacion-header {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
     margin-bottom: 10px;
+}
+.publicacion-header-container {
+    margin-left: 2%;
+    display:flex;
+    flex-direction: column;
+}
+
+.publicacion-info {
+    display: flex;
+    justify-content:space-between;
+}
+
+.publicacion-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.publicacion-buttons{
+    width: 40%;
+}
+.publicacion-content-text{
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+}
+
+.publicacion-content-img{
+    width: 100%;;
+}
+
+.boton {
+    width: 90%;
+    height: 15%;
+
+}
+
+.publicacion-actions {
+    padding: 5px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.publicacion-buttons {
+    margin-inline: 10px
+}
+
+.publicacion-page-name{
+    color:green;
+    font-weight: bold;
+}
+
+.suscripcion{
+    width: 90%;
+    animation: infinite 2s suscripcion ;
+}
+
+@keyframes suscripcion{
+    0%{
+        background-color: #597560;
+    }
+    50%{
+        background-color: yellowgreen;
+        transform: scale(1.1);
+    }
+    100%{
+        background-color: #597560;
+    }
+}
+
+.suscripcion:hover{
+    background-color: #597560;
+    transform: scale(.09);
 }
