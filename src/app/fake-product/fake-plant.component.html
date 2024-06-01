@@ -1,8 +1,8 @@
 <!--<p>fake-plant works!</p>-->
 
 <div class="imagenes">
-    <div routerLink="/plant-details" class="planta" *ngFor="let plant of arrFakePlants; let i = index">
-        {{ plant.nombre}}
+    <div routerLink="/plant-details" class="planta" *ngFor="let plant of arrPlants; let i = index">
+        {{ plant.name}} {{ plant.type}} {{ plant.origin}} {{ plant.description}}
         <img src="{{ plant.imagen }}" alt=""> 
     </div>
 </div>

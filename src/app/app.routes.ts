@@ -1,6 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 import { WikiComponent } from './wiki/wiki.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 import { NgModule } from '@angular/core';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
@@ -8,7 +8,7 @@ import { NewUserComponent } from './new-user/new-user.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { FakePlantComponent } from './fake-product/fake-plant.component';
 import { PlantDetailsComponent } from './plant-details/plant-details.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { ShopComponent } from './shop/shop.component';
 import { GamesComponent } from './games/games.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';

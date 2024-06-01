@@ -4,10 +4,12 @@ import { HttpHeaders } from '@angular/common/http';
 
 const LINKS_QUERY = gql`
   query FakeLinks  {
-    links  {
+    plants  {
         id
-        url
+        type
+        origin
         description
+        image
       }
   }
 `;
@@ -19,7 +21,7 @@ export class GraphqlLinkService {
 
   constructor(private apollo: Apollo) { }
 
-  getLinks() {
+  getPlants(mytoken: string) {
     
       return this.apollo.query({
         query: LINKS_QUERY,
@@ -28,6 +30,7 @@ export class GraphqlLinkService {
         context: {
           // example of setting the headers with context per operation
           // headers: new HttpHeaders().set('Authorization', 'JWT ' + mytoken),
+          headers: new HttpHeaders().set('Authorization', 'JWT ' + mytoken),
         },
       });
     //}

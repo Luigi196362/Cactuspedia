@@ -5,11 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { Token } from '../models/user/Token';
 import { Credential } from '../models/user/Credential';
 import { StorageService } from '../services/storage.service';
+import { ApolloModule, APOLLO_OPTIONS } from 'apollo-angular';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink,FormsModule],
+  imports: [RouterLink,FormsModule,ApolloModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -38,7 +39,7 @@ export class LoginComponent {
      this.storageService.setSession("token", JSON.parse(JSON.stringify(data)).tokenAuth.token);
 
      this.router.navigate(['/home']);
-
+     
   }, (error) => {
      console.log('there was an error sending the query', error);
      this.myCredential.username = "";
