@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink} from '@angular/router';
-import { UserService } from '../services/user.service';
+import { UserService } from '../../services/user.service';
 import { FormsModule } from '@angular/forms';
-import { Token } from '../models/user/Token';
-import { Credential } from '../models/user/Credential';
-import { StorageService } from '../services/storage.service';
+import { Token } from '../../models/user/Token';
+import { Credential } from '../../models/user/Credential';
+import { StorageService } from '../../services/storage.service';
 import { ApolloModule, APOLLO_OPTIONS } from 'apollo-angular';
 
 @Component({

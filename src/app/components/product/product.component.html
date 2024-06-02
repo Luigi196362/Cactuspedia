@@ -1,0 +1,26 @@
+<!--<p>fake-plant works!</p>-->
+
+<div class="contenedor">
+    <form>
+        <input class="barra" type="number" id="busqueda" name="id" placeholder="id" (input)="onInputChange()" [(ngModel)]="id">
+        <input class="barra" type="text" id="busqueda" name="name" placeholder="nombre" (input)="onInputChange()" [(ngModel)]="name">
+        <input class="barra" type="number" id="busqueda" name="price" placeholder="precio" (input)="onInputChange()" [(ngModel)]="price">
+        <input class="barra" type="number" id="busqueda" name="stock" placeholder="stock" (input)="onInputChange()" [(ngModel)]="stock">
+        <input class="barra" type="text" id="busqueda" name="description" placeholder="Descripcion" (input)="onInputChange()" [(ngModel)]="description">
+        <button class="boton_barra" type="submit">Buscar</button>
+
+        <button routerLink="/create-product">Añadir producto</button>
+    </form>
+</div>
+
+<div class="plants">
+
+    <div class="plant-container" *ngFor="let product of arrProducts; let i = index">
+        <div class="plant"  (click)="navigate(product.id)"  >
+            <div class="plant-image-container" > <img class="plant-image" src="{{ product.productImage }}" alt=""></div>
+            <div class="plant-name">{{product.productName}} </div>
+        </div>
+        <button class="deleteButton" (click)="confirmDelete(product.id)">x</button>
+    </div>
+
+</div>

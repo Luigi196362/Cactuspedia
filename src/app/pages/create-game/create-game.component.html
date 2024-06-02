@@ -1,0 +1,35 @@
+<!-- Formulario para crear una planta -->
+<form (ngSubmit)="createPlant()">
+    <div class="form-container">
+      <div class="form-actions">
+        <div class="input-group">
+          <label>Nombre:</label><br>
+          <input type="text" placeholder="Cuida el jardin" [(ngModel)]="name" name="name">
+        </div>
+        <div class="input-group">
+          <label>Tipo:</label><br>
+          <input type="text" placeholder="Juego donde debes de cuidar unas plantas..." [(ngModel)]="description" name="description">
+        </div>
+        <div class="input-group">
+          <label>Origen:</label><br>
+          <input type="text" placeholder="https://th.bing.com/..." [(ngModel)]="icon" name="icon">
+        </div>
+        <div class="input-group">
+          <label>Url de imagen:</label><br>
+          <input type="text" placeholder="https://th.bing.com/..." [(ngModel)]="image" name="image">
+        </div>
+      </div>
+      <div class="image-preview-container">
+        <div class="label-container">
+          <label>Previsualización de imagen:</label>
+        </div>
+        <div class="image-wrapper">
+          <img class="preview-image" src={{image}}>
+        </div>
+      </div>
+    </div>
+    <div class="submit-button">
+      <button type="submit">Crear</button>
+    </div>
+  </form>
+  

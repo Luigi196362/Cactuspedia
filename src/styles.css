@@ -18,7 +18,7 @@ body {
 
 button {
    min-height: 40px;
-   ;
+   min-width: 40px;
    border-radius: 10px;
    border: none;
    background-color: #597560;

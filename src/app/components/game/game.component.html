@@ -1,0 +1,25 @@
+<p>game works!</p>
+<!--<p>fake-plant works!</p>-->
+
+<div class="contenedor">
+    <form>
+        <input class="barra" type="number" id="busqueda" name="id" placeholder="id" (input)="onInputChange()" [(ngModel)]="id">
+        <input class="barra" type="text" id="busqueda" name="name" placeholder="nombre" (input)="onInputChange()" [(ngModel)]="name">
+        <input class="barra" type="text" id="busqueda" name="description" placeholder="Descripcion" (input)="onInputChange()" [(ngModel)]="description">
+        <button class="boton_barra" type="submit">Buscar</button>
+
+        <button routerLink="/create-game">Añadir juego</button>
+    </form>
+</div>
+
+<div class="plants">
+
+    <div class="plant-container" *ngFor="let game of arrGames; let i = index">
+        <div class="plant"  (click)="navigate(game.id)"  >
+            <div class="plant-image-container" > <img class="plant-image" src="{{ game.gameIcon }}" alt=""></div>
+            <div class="plant-name">{{game.gameName}} </div>
+        </div>
+        <button class="deleteButton" (click)="confirmDelete(game.id)">x</button>
+    </div>
+
+</div>

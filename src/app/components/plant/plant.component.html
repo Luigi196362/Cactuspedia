@@ -1,0 +1,26 @@
+<!--<p>fake-plant works!</p>-->
+
+<div class="contenedor">
+    <form>
+        <input class="barra" type="number" id="busqueda" name="id" placeholder="id" (input)="onInputChange()" [(ngModel)]="id">
+        <input class="barra" type="text" id="busqueda" name="name" placeholder="nombre" (input)="onInputChange()" [(ngModel)]="name">
+        <input class="barra" type="text" id="busqueda" name="type" placeholder="tipo" (input)="onInputChange()" [(ngModel)]="type">
+        <input class="barra" type="text" id="busqueda" name="origin" placeholder="origen" (input)="onInputChange()" [(ngModel)]="origin">
+        <input class="barra" type="text" id="busqueda" name="description" placeholder="Descripcion" (input)="onInputChange()" [(ngModel)]="description">
+        <button class="boton_barra" type="submit">Buscar</button>
+
+        <button routerLink="/create-plant">Añadir planta</button>
+    </form>
+</div>
+
+<div class="plants">
+
+    <div class="plant-container" *ngFor="let plant of arrPlants; let i = index">
+        <div class="plant"  (click)="navigate(plant.id)"  >
+            <div class="plant-image-container" > <img class="plant-image" src="{{ plant.plantImage }}" alt=""></div>
+            <div class="plant-name">{{plant.plantName}} </div>
+        </div>
+        <button class="deleteButton" (click)="confirmDelete(plant.id)">x</button>
+    </div>
+
+</div>

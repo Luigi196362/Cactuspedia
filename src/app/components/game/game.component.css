@@ -1,0 +1,70 @@
+.plants {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    row-gap: 5%;
+}
+
+.plant-container {
+    margin-left: auto;
+
+    margin-right: auto;
+    width: 30%;
+    min-width: 200px;
+    align-items: center;
+    position: relative;
+    /* Añadido */
+}
+
+.plant-container:hover {
+    transform: scale(1.02);
+}
+
+.plant-container:active {
+    transform: scale(.9);
+}
+
+.plant {
+    border-radius: 20px;
+    background-color: rgb(255, 189, 66);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 9fr 1fr;
+}
+
+.plant-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plant-image {
+    width: 80%;
+}
+
+.plant-name {
+    height: 100%;
+    text-align: center;
+}
+
+.deleteButton {
+    position: absolute;
+    top: 0px;
+    /* Ajusta según sea necesario */
+    right: 0px;
+    /* Ajusta según sea necesario */
+    background-color: red;
+    box-shadow: -2px 2px 1px 1px rgba(128, 128, 128, 0.548);
+    width: 20px;
+    /* Cambiado para mejor visibilidad */
+    height: 20px;
+    /* Añadido */
+    border: none;
+    /* Añadido para quitar el borde por defecto */
+    border-radius: 20%;
+    /* Añadido para hacer el botón circular */
+    color: white;
+    /* Añadido para el color del texto */
+    cursor: pointer;
+    /* Añadido para cambiar el cursor al pasar sobre el botón */
+}

@@ -20,27 +20,27 @@ export class AppComponent {
   
   ngOnInit(): void {
   
-    alert("comprobacion")
+    //alert("comprobacion")
     this.getisLoggedIn();
   }
 
   ngAfterViewInit(): void {
   
-    alert("comprobacion")
+    //alert("comprobacion")
     this.getisLoggedIn();
   }
 
   private getisLoggedIn() {
-    alert(this.storageService.getSession("token"))
+    //alert(this.storageService.getSession("token"))
     if (this.storageService.getSession("token") == null) {
       
       this.isLoggedIn=false;
-      alert(this.isLoggedIn)
+      //alert(this.isLoggedIn)
 
     }else{
 
       this.isLoggedIn=true;
-      alert(this.isLoggedIn)
+      //alert(this.isLoggedIn)
     }
   }
 

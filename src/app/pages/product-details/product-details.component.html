@@ -1,0 +1,31 @@
+<div class="product">
+    <img class="product-img"
+        src={{productDetails.productImage}}>
+    <div class="product-content">
+        <div class="product-info">
+            <div class="product-name">
+                {{productDetails.productName}}
+            </div>
+            <div class="product-stock">
+                Stock: {{productDetails.productStock}}
+            </div>
+            <div class="product-price">
+                ${{productDetails.productPrice}}
+            </div>
+            
+        </div>
+        <div class="product-actions">
+            <div class="product-quantity">
+                <button class="product-quantity-button">-</button>1<button class="product-quantity-button">+</button>
+            </div>
+            <button>Añadir a la cesta</button>
+        </div>
+        <div class="product-description">
+            <p>
+            {{productDetails.productDescription}}
+        </div>
+
+    </div>
+    
+</div>
+<button routerLink="/shop" class="volver-button">volver</button>
