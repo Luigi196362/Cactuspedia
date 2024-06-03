@@ -8,8 +8,9 @@
         <input class="barra" type="text" id="busqueda" name="origin" placeholder="origen" (input)="onInputChange()" [(ngModel)]="origin">
         <input class="barra" type="text" id="busqueda" name="description" placeholder="Descripcion" (input)="onInputChange()" [(ngModel)]="description">
         <button class="boton_barra" type="submit">Buscar</button>
+        <button class="boton_barra" (click)="Admin()">{{admin ? 'Ya no quiero ser admin':'Quiero ser admin'}}</button>
 
-        <button routerLink="/create-plant">Añadir planta</button>
+        <button *ngIf="admin" routerLink="/create-plant">Añadir planta</button>
     </form>
 </div>
 
@@ -20,7 +21,7 @@
             <div class="plant-image-container" > <img class="plant-image" src="{{ plant.plantImage }}" alt=""></div>
             <div class="plant-name">{{plant.plantName}} </div>
         </div>
-        <button class="deleteButton" (click)="confirmDelete(plant.id)">x</button>
+        <button *ngIf="admin" class="deleteButton" (click)="confirmDelete(plant.id)">x</button>
     </div>
 
 </div>

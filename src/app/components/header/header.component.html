@@ -1,0 +1,18 @@
+
+<nav>
+    <div class="container">
+      <a class="cactuspedia" (click)="navigate()">
+        <h1>cactuspedia</h1>
+      </a>
+      <div class="botones">
+        <button class="boton" (click)="handleSession()">{{ isLoggedIn ? 'Cerrar sesión' : 'Iniciar sesión' }}</button>
+  
+          <button class="boton" routerLink="/new-user">Crear cuenta</button>
+
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+  

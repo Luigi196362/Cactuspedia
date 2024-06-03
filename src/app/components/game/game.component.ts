@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../../services/storage.service';
 import { GraphqlGameService } from '../../services/graphql/graphql-game.service'
 import { Router, RouterLink } from '@angular/router';
@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './game.component.html',
   styleUrl: './game.component.css'
 })
-export class GameComponent {
+export class GameComponent implements OnInit{
 
   constructor(
     private storageService: StorageService,
@@ -28,15 +28,22 @@ export class GameComponent {
   description: String;
   icon: String;
   image: String;
-
+  admin:boolean=false;
   loading: boolean;
   token: string = "";
 
   private graphqlSubscription: Subscription;
 
-  ngAfterViewInit(): void {
-    this.getGames();
+  ngOnInit(): void {
+    this.getGames();  
+  }
 
+  Admin(){
+    if(this.admin){
+      this.admin=false
+    }else{
+      this.admin=true
+    }
   }
 
   navigate(id: number) {
@@ -49,6 +56,7 @@ export class GameComponent {
 
   private getGames() {
     this.token = this.storageService.getSession("token");
+    console.log(this.token)
     this.gameDetails.gameName = this.name;
     this.gameDetails.gameDescription = this.description;
     this.gameDetails.gameIcon = this.icon;

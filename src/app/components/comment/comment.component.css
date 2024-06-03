@@ -1,0 +1,38 @@
+
+.comment{
+    
+    padding-top: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.comment-photo{
+    align-self: self-start;
+    margin-top: 3px;
+    margin-right: 10px;
+    border-radius: 100%;
+    width: 6%;
+}
+
+.comment-photo:hover{
+    transform: scale(1.1);
+}
+.comment-username{
+    font-weight: bold;
+}
+.comment-content{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 215, 163);;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.comment-content-img{
+    width: 40%;
+    border-radius: 20px;
+}
+

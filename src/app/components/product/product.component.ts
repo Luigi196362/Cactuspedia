@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { StorageService } from '../../services/storage.service';
 import { Router, RouterLink } from '@angular/router';
@@ -6,6 +6,7 @@ import { GraphqlProductService } from '../../services/graphql/graphql-product.se
 import { Product } from '../../models/product/Product';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-product',
   standalone: true,
@@ -13,7 +14,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit{
+  
   constructor(
     private storageService: StorageService,
     private graphqlProductService: GraphqlProductService,
@@ -28,15 +30,24 @@ export class ProductComponent {
   stock: number;
   description: String;
   image: String;
-
+  isLoggedIn:boolean;
   loading: boolean;
   token: string = "";
-
+  admin:boolean=false;
   private graphqlProductSubscription: Subscription;
 
-  ngAfterViewInit(): void {
-    this.getProducts();
 
+  ngOnInit(): void {
+    //alert(this.admin)
+    this.getProducts();
+  }
+
+  Admin(){
+    if(this.admin){
+      this.admin=false
+    }else{
+      this.admin=true
+    }
   }
 
   navigate(id: number) {
@@ -53,7 +64,7 @@ export class ProductComponent {
     this.productDetails.productPrice= this.price;
     this.productDetails.productStock = this.stock;
     this.productDetails.productDescription = this.description;
-    this.graphqlProductSubscription = this.graphqlProductService.getProducts(this.token, this.id,this.productDetails)
+    this.graphqlProductSubscription = this.graphqlProductService.getProducts(this.id,this.productDetails)
       .subscribe(({ data, loading }) => {
         this.loading;
         this.arrProducts = JSON.parse(JSON.stringify(data)).products;
@@ -85,5 +96,6 @@ export class ProductComponent {
         console.error('Error:', error);
       });
   }
+
 
 }

@@ -1,0 +1,45 @@
+
+
+nav{
+
+}
+.container{
+    position:fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width:100%;
+    max-height: 10vh;
+    background-color: #82b874;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    min-width: 60px;
+    min-height: 60px;
+}
+.cactuspedia{
+    margin-left: 5vw;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+.cactuspedia:hover{
+    color:#ebf2d8
+}
+
+.botones{
+    cursor: pointer;
+    margin-right: 5vw;
+    display: flex;
+    width: 30vw;
+    justify-content: space-between;
+}
+
+.boton{
+    font-size: 1.2vi;
+    border:none;
+    width: 9vi;
+    height: 3vi;
+}

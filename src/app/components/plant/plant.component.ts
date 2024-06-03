@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -14,7 +14,7 @@ import { Plant } from '../../models/plant/Plant';
   templateUrl: './plant.component.html',
   styleUrl: './plant.component.css'
 })
-export class PlantComponent {
+export class PlantComponent  implements OnInit{
   constructor(
     private storageService: StorageService,
     private graphqlPlantService: GraphqlPlantService,
@@ -29,16 +29,26 @@ export class PlantComponent {
   origin: String;
   description: String;
   image: String;
-
+  admin:boolean=false;
   loading: boolean;
   token: string = "";
 
   private graphqlSubscription: Subscription;
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
+    //alert(this.admin)
     this.getPlants();
 
   }
+
+  Admin(){
+    if(this.admin){
+      this.admin=false
+    }else{
+      this.admin=true
+    }
+  }
+
 
   navigate(id: number) {
     this.router.navigate(['/plant-details', id]);
@@ -88,5 +98,16 @@ export class PlantComponent {
       });
   }
 
+  /*getAdmin(){
+    this.token = this.storageService.getSession("token");
+    
+    console.log("admin")
+
+    this.graphqlSubscription = this.user.getAdmin(this.token)
+    .subscribe(({ data, loading }) => {
+      console.log("admin")
+
+    });
+  }*/
 
 }
