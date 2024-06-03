@@ -3,6 +3,7 @@ import { Credential } from '../models/user/Credential'
 import { User } from '../models/user/User'
 import { Token } from '../models/user/Token'
 import {Apollo, gql} from 'apollo-angular';
+import { HttpHeaders } from '@angular/common/http';
 
 const TOKENAUTH = gql`
   mutation TokenAuth($username: String!, $password: String!) {
@@ -24,6 +25,16 @@ const CREATEUSER = gql`
   }
   `;
 
+  const PREMIUM_QUERY = gql`
+  query Product {
+    isPremium
+  }
+`;
+const ADMIN_QUERY = gql`
+  query Product {
+    isAdmin
+  }
+`;
 @Injectable({
   providedIn: 'root'
 })
@@ -200,4 +211,33 @@ export class UserService {
     return "" + istokenDestroyed;
   }
 
+  getPremium(mytoken: string) {
+
+    return this.apollo.query({
+      query: PREMIUM_QUERY,
+      variables: {
+      },
+      context: {
+
+        headers: new HttpHeaders().set('Authorization', 'JWT ' + mytoken),
+      },
+    });
+
+  }
+  getAdmin(mytoken: string) {
+
+    return this.apollo.query({
+      query: ADMIN_QUERY,
+      variables: {
+      },
+      context: {
+
+        headers: new HttpHeaders().set('Authorization', 'JWT ' + mytoken),
+      },
+    });
+
+  }
+
+
 }
+

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-ia-chat',
@@ -9,5 +10,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './ia-chat.component.css'
 })
 export class IaChatComponent {
-
+  constructor() { }
+ 
 }

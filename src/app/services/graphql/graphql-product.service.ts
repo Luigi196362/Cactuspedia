@@ -77,7 +77,7 @@ export class GraphqlProductService {
   constructor(private apollo: Apollo) { }
 
 
-  getProducts(mytoken: string,id:number,productDetails:Product) {
+  getProducts(id:number,productDetails:Product) {
 
     return this.apollo.query({
       query: PRODUCTS_QUERY,
@@ -90,12 +90,12 @@ export class GraphqlProductService {
       },
       context: {
 
-        headers: new HttpHeaders().set('Authorization', 'JWT ' + mytoken),
+        
       },
     });
 
   }
-  getIDProduct(mytoken: string, id: number) {
+  getIDProduct( id: number) {
 
     return this.apollo.query({
       query: PRODUCT_ID_QUERY,
@@ -104,7 +104,7 @@ export class GraphqlProductService {
       },
       context: {
 
-        headers: new HttpHeaders().set('Authorization', 'JWT ' + mytoken),
+        
       },
     });
 

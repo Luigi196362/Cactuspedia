@@ -30,7 +30,7 @@ export class ProductDetailsComponent {
   private getProduct() {
     this.token = this.storageService.getSession("token");
     const productId = parseInt(this.route.snapshot.paramMap.get('id'));
-    this.graphqlSubscription = this.graphqlProductService.getIDProduct(this.token, productId)
+    this.graphqlSubscription = this.graphqlProductService.getIDProduct(productId)
       .subscribe(({ data, loading }) => {
 
         this.productDetails = JSON.parse(JSON.stringify(data)).product;
