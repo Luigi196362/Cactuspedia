@@ -7,6 +7,7 @@ import { Product } from '../../models/product/Product';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth.service';
+import { UserService } from '../../services/user.service';
 @Component({
   selector: 'app-product',
   standalone: true,
@@ -18,6 +19,7 @@ export class ProductComponent implements OnInit{
   
   constructor(
     private storageService: StorageService,
+    private userSevice: UserService,
     private graphqlProductService: GraphqlProductService,
     private router: Router,
   ) { }
@@ -33,22 +35,30 @@ export class ProductComponent implements OnInit{
   isLoggedIn:boolean;
   loading: boolean;
   token: string = "";
-  admin:boolean=false;
-  private graphqlProductSubscription: Subscription;
+  Admin:boolean=false;
+  private graphqlSubscription: Subscription;
 
 
   ngOnInit(): void {
     //alert(this.admin)
     this.getProducts();
+    this.token = this.storageService.getSession("token");
+    if (this.token) {
+      this.getAdmin();
+    } else {
+      this.router.navigate(['/login']);
+    }
+
+  }
+  getAdmin() {
+
+    this.graphqlSubscription = this.userSevice.getAdmin(this.token)
+      .subscribe(({ data, loading }) => {
+        this.Admin = JSON.parse(JSON.stringify(data)).isAdmin;
+        console.log(this.Admin)
+      });
   }
 
-  Admin(){
-    if(this.admin){
-      this.admin=false
-    }else{
-      this.admin=true
-    }
-  }
 
   navigate(id: number) {
     this.router.navigate(['/product-details', id]);
@@ -64,7 +74,7 @@ export class ProductComponent implements OnInit{
     this.productDetails.productPrice= this.price;
     this.productDetails.productStock = this.stock;
     this.productDetails.productDescription = this.description;
-    this.graphqlProductSubscription = this.graphqlProductService.getProducts(this.id,this.productDetails)
+    this.graphqlSubscription = this.graphqlProductService.getProducts(this.id,this.productDetails)
       .subscribe(({ data, loading }) => {
         this.loading;
         this.arrProducts = JSON.parse(JSON.stringify(data)).products;
@@ -85,7 +95,7 @@ export class ProductComponent implements OnInit{
   deleteProduct(deleteProduct: number) {
     this.token = this.storageService.getSession("token");
 
-    this.graphqlProductSubscription = this.graphqlProductService.deleteProduct(this.token, deleteProduct)
+    this.graphqlSubscription = this.graphqlProductService.deleteProduct(this.token, deleteProduct)
       .subscribe(({ data, loading }) => {
 
         console.log('Data:', data);

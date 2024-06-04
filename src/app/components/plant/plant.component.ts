@@ -6,6 +6,7 @@ import { StorageService } from '../../services/storage.service';
 import { GraphqlPlantService } from '../../services/graphql/graphql-plant.service';
 import { Subscription } from 'rxjs';
 import { Plant } from '../../models/plant/Plant';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-plant',
@@ -16,6 +17,7 @@ import { Plant } from '../../models/plant/Plant';
 })
 export class PlantComponent  implements OnInit{
   constructor(
+    private userSevice: UserService,
     private storageService: StorageService,
     private graphqlPlantService: GraphqlPlantService,
     private router: Router,
@@ -29,7 +31,7 @@ export class PlantComponent  implements OnInit{
   origin: String;
   description: String;
   image: String;
-  admin:boolean=false;
+  Admin:boolean;
   loading: boolean;
   token: string = "";
 
@@ -38,17 +40,25 @@ export class PlantComponent  implements OnInit{
   ngOnInit(): void {
     //alert(this.admin)
     this.getPlants();
-
-  }
-
-  Admin(){
-    if(this.admin){
-      this.admin=false
-    }else{
-      this.admin=true
+    this.token = this.storageService.getSession("token");
+    if (this.token) {
+      this.getAdmin();
+    } else {
+      this.router.navigate(['/login']);
     }
+
   }
 
+
+  getAdmin() {
+    console.log("premium")
+
+    this.graphqlSubscription = this.userSevice.getAdmin(this.token)
+      .subscribe(({ data, loading }) => {
+        this.Admin = JSON.parse(JSON.stringify(data)).isAdmin;
+        console.log(this.Admin)
+      });
+  }
 
   navigate(id: number) {
     this.router.navigate(['/plant-details', id]);

@@ -6,16 +6,18 @@ import { Game } from '../../models/game/Game';
 import { Subscription } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../../services/user.service';
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [RouterLink,FormsModule,CommonModule],
+  imports: [RouterLink, FormsModule, CommonModule],
   templateUrl: './game.component.html',
   styleUrl: './game.component.css'
 })
-export class GameComponent implements OnInit{
+export class GameComponent implements OnInit {
 
   constructor(
+    private userSevice: UserService,
     private storageService: StorageService,
     private graphqlGameService: GraphqlGameService,
     private router: Router,
@@ -28,22 +30,31 @@ export class GameComponent implements OnInit{
   description: String;
   icon: String;
   image: String;
-  admin:boolean=false;
+  Admin: boolean;
   loading: boolean;
   token: string = "";
 
   private graphqlSubscription: Subscription;
 
   ngOnInit(): void {
-    this.getGames();  
+    this.getGames();
+    this.token = this.storageService.getSession("token");
+    if (this.token) {
+      this.getAdmin();
+    } else {
+      this.router.navigate(['/login']);
+    }
+
   }
 
-  Admin(){
-    if(this.admin){
-      this.admin=false
-    }else{
-      this.admin=true
-    }
+  getAdmin() {
+    console.log("premium")
+
+    this.graphqlSubscription = this.userSevice.getAdmin(this.token)
+      .subscribe(({ data, loading }) => {
+        this.Admin = JSON.parse(JSON.stringify(data)).isAdmin;
+        console.log(this.Admin)
+      });
   }
 
   navigate(id: number) {
@@ -61,7 +72,7 @@ export class GameComponent implements OnInit{
     this.gameDetails.gameDescription = this.description;
     this.gameDetails.gameIcon = this.icon;
     this.gameDetails.gameImage = this.image;
-    
+
     this.graphqlSubscription = this.graphqlGameService.getGames(this.token, this.id, this.gameDetails)
       .subscribe(({ data, loading }) => {
         this.loading;

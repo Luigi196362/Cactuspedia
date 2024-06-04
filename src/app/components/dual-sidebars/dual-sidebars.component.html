@@ -27,5 +27,7 @@
     <button class="boton" routerLink="/games">Juegos</button>
     <button (click)="navigate_wiki()" class="boton" >Wiki ⭐</button>
     <button  (click)="navigate_ia()"class="boton" >Asistente IA⭐</button>
-    <button class="suscripcion" routerLink="/subscription-page">Se parte del Jardin Magico</button>
+    <button class="post" routerLink="/create-post">Crear publicacion</button>
+    <button *ngIf="!Premium" class="suscripcion" routerLink="/subscription-page">Se parte del Jardin Magico</button>
+    
 </nav>

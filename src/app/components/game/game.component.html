@@ -7,8 +7,8 @@
         <input class="barra" type="text" id="busqueda" name="name" placeholder="nombre" (input)="onInputChange()" [(ngModel)]="name">
         <input class="barra" type="text" id="busqueda" name="description" placeholder="Descripcion" (input)="onInputChange()" [(ngModel)]="description">
         <button class="boton_barra" type="submit">Buscar</button>
-        <button class="boton_barra" (click)="Admin()">{{admin ? 'Ya no quiero ser admin':'Quiero ser admin'}}</button>
-        <button *ngIf="admin" routerLink="/create-game">Añadir juego</button>
+        <button class="boton_barra" >{{Admin ? 'Ya no quiero ser admin':'Quiero ser admin'}}</button>
+        <button *ngIf="Admin" routerLink="/create-game">Añadir juego</button>
     </form>
 </div>
 
@@ -19,7 +19,7 @@
             <div class="plant-image-container" > <img class="plant-image" src="{{ game.gameIcon }}" alt=""></div>
             <div class="plant-name">{{game.gameName}} </div>
         </div>
-        <button *ngIf="admin" class="deleteButton" (click)="confirmDelete(game.id)">x</button>
+        <button *ngIf="Admin" class="deleteButton" (click)="confirmDelete(game.id)">x</button>
     </div>
 
 </div>

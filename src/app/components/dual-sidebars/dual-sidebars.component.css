@@ -54,6 +54,13 @@
 }
 
 .boton {
+    width: 80%;
+    height: 10%;
+
+}
+
+.post {
+    background-color: rgb(204, 92, 0);
     width: 90%;
     height: 15%;
 

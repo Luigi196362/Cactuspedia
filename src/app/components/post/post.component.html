@@ -1,0 +1,156 @@
+<div routerLink="/publication-details" class="publicacion" *ngFor="let post of arrPost; let i = index">
+    <header class="publicacion-header">
+        <img class="publicacion-photo" src="{{ post.postUser.profileImage }}">
+
+        <div class="publicacion-header-container">
+            <!--<div class="publicacion-page-name">Cactus México</div>-->
+            <div class="publicacion-username">{{post.postUser.username}} {{ post.postUser.isAdmin ? '⭐' : '' }} {{ post.postUser.isPremium ? '🌵' : '' }}</div>
+        </div>
+    </header>
+    <div class="publicacion-content">
+        <div class="publicacion-content-text">
+            {{post.postText}}
+        </div>
+        <img class="publicacion-content-img" src="{{ post.postImage }}">
+        <button *ngIf="Admin" class="deleteButton" (click)="confirmDelete(post.id)">x</button>
+    </div>
+
+    <!--<div class="publicacion-info">
+        <div>😢🤣👍10</div>
+        <div>🗨️6 🔁1</div>
+    </div>
+    <nav class="publicacion-actions">
+        <button class="publicacion-buttons">👍 Me gusta</button><button class="publicacion-buttons">🗨️
+            Comentar</button><button class="publicacion-buttons">🔁 Compartir</button>
+    </nav>
+-->
+</div>
+<!--
+<div>
+<div routerLink="/publication-details" class="publicacion">
+    <header class="publicacion-header">
+            <img class="publicacion-photo"
+                src="https://i.pinimg.com/originals/7b/c8/f1/7bc8f13e8b94c36109904b4c85e35d71.jpg">
+
+        <div class="publicacion-header-container">
+            <div class="publicacion-page-name">Cactus México</div>
+            <div class="publicacion-username">Juan ⭐</div>
+        </div>
+    </header>
+    <div class="publicacion-content">
+        <div class="publicacion-content-text">
+            Ayuda, alguien sabe que esta pasando con mi cactus? 😱
+        </div>
+        <img class="publicacion-content-img"
+            src="https://th.bing.com/th/id/OIP.Z1ezyFn0-HZLK_U2hHwTFwHaE8?rs=1&pid=ImgDetMain">
+
+    </div>
+    <div class="publicacion-info">
+        <div>😢🤣👍10</div>
+        <div>🗨️6 🔁1</div>
+    </div>
+    <nav class="publicacion-actions">
+        <button class="publicacion-buttons">👍 Me gusta</button><button class="publicacion-buttons">🗨️
+            Comentar</button><button class="publicacion-buttons">🔁 Compartir</button>
+    </nav>
+</div>
+
+<div routerLink="/publication-details" class="publicacion">
+    <header class="publicacion-header">
+        <img class="publicacion-photo"
+            src="https://image.freepik.com/vector-gratis/logotipo-jardineria-flow-cdr_8855-144.jpg">
+        <div class="publicacion-header-container">
+            <div class="publicacion-page-name">VerdeVivo Jardinería!</div>
+            <div class="publicacion-username">publicidad</div>
+        </div>
+    </header>
+    <div class="publicacion-content">
+        <div class="publicacion-content-text">
+            ¡Haz realidad el jardín de tus sueños con [Nombre de tu Empresa]! Nuestro equipo de expertos en
+            jardinería ofrece diseño personalizado, mantenimiento de calidad y soluciones de paisajismo para
+            transformar tu espacio exterior en un oasis de belleza y tranquilidad. Contáctanos hoy para una
+            consulta gratuita y comienza a disfrutar de un jardín espectacular.
+        </div>
+        <img class="publicacion-content-img"
+            src="https://d2vr64fd62ajh5.cloudfront.net/img/blog/3yb-garden-center-flyers-jardineria-plantillas-editables-online-imprimir.jpg">
+
+    </div>
+    <div class="publicacion-info">
+        <div>💖👍100</div>
+        <div>🗨️200 🔁5</div>
+    </div>
+    <nav class="publicacion-actions">
+        <button class="publicacion-buttons">👍 Me gusta</button><button class="publicacion-buttons">🗨️
+            Comentar</button><button class="publicacion-buttons">🔁 Compartir</button>
+    </nav>
+</div>
+
+
+<div routerLink="/publication-details" class="publicacion">
+    <header class="publicacion-header">
+        <img class="publicacion-photo"
+            src="https://thumbs.dreamstime.com/b/mujer-mayor-sonriente-hermosa-70405244.jpg">
+        <div class="publicacion-header-container">
+            <div class="publicacion-page-name">Amo los cactus</div>
+            <div class="publicacion-username">Paula</div>
+        </div>
+    </header>
+    <div class="publicacion-content">
+        <div class="publicacion-content-text">
+            "¡Hola amigos! 🌵✏️ Quería compartir con ustedes mi último dibujo: un cactus que captura toda la
+            magia y la resistencia de la naturaleza. Me inspiré en la belleza de estas plantas del desierto, con
+            sus espinas que son como pequeños recordatorios de su fuerza interior. Espero que les guste tanto
+            como a mí dibujarlo. ¡Gracias por su apoyo y feliz día para todos! 🎨💖 #Dibujo #Cactus #Arte"
+        </div>
+        <img class="publicacion-content-img"
+            src="https://th.bing.com/th/id/OIP.RFEmh6pvqtfQn2UlG5k68QHaEJ?rs=1&pid=ImgDetMain">
+
+    </div>
+    <div class="publicacion-info">
+        <div>💖👍100k</div>
+        <div>🗨️200 🔁150</div>
+    </div>
+    <nav class="publicacion-actions">
+        <button class="publicacion-buttons">👍 Me gusta</button><button class="publicacion-buttons">🗨️
+            Comentar</button><button class="publicacion-buttons">🔁 Compartir</button>
+    </nav>
+</div>
+
+
+<div routerLink="/publication-details" class="publicacion">
+    <header class="publicacion-header">
+        <img class="publicacion-photo"
+            src="https://th.bing.com/th/id/R.c8aa8b9438215442e275d1de267d84b7?rik=kULhQMJietEGsA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-cAhvEP24Dr4%2fTaV7R1SY4ZI%2fAAAAAAAAAAo%2fOSW4tgqhptM%2fs1600%2fpiolin....jpg&ehk=%2bmmdinG6QHuMoRwM55BSTRUqvuutNzm39qvTI8x6z5c%3d&risl=&pid=ImgRaw&r=0">
+        <div class="publicacion-header-container">
+            <div class="publicacion-page-name"></div>
+            <div class="publicacion-username">Lisa</div>
+        </div>
+    </header>
+    <div class="publicacion-content">
+        <div class="publicacion-content-text">
+            🌵✨ Lecciones de vida desde el desierto ✨🌵
+
+            El cactus nos enseña que, incluso en los entornos más desafiantes, podemos prosperar. Esta planta
+            sobrevive y florece en condiciones extremas, recordándonos que la verdadera fortaleza reside en
+            nuestra capacidad de adaptarnos y mantenernos firmes frente a las adversidades.
+
+            Cada espina es una defensa y cada flor es un testimonio de resiliencia. Que el cactus sea nuestro
+            recordatorio de que, no importa cuán difíciles sean las circunstancias, siempre podemos seguir
+            creciendo y floreciendo.
+
+            ¡Feliz día! 🌞🌵❤️ #LeccionesDelCactus #Resiliencia #NaturalezaInspira
+        </div>
+        <img class="publicacion-content-img"
+            src="https://th.bing.com/th/id/R.f12891b61397d157c9cca30c9b514677?rik=Z1%2bLLUFXHOXOaA&riu=http%3a%2f%2fcactuseros.s3-website-eu-west-1.amazonaws.com%2fImagenes%2fCactusUsuarios%2fmarcoantonio10%2f128047.jpg&ehk=Bw2sep%2bCeGeNKl%2fKojXFqXlkziEnCAqyOQuBdGLd3EA%3d&risl=&pid=ImgRaw&r=0">
+
+    </div>
+    <div class="publicacion-info">
+        <div>💖👍10</div>
+        <div>🗨️5 🔁2</div>
+    </div>
+    <nav class="publicacion-actions">
+        <button class="publicacion-buttons">👍 Me gusta</button><button class="publicacion-buttons">🗨️
+            Comentar</button><button class="publicacion-buttons">🔁 Compartir</button>
+    </nav>
+</div>
+</div>-->

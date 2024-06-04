@@ -19,6 +19,7 @@ import { SubscriptionPageComponent } from './pages/subscription-page/subscriptio
 import { CreatePlantComponent } from './pages/create-plant/create-plant.component'; 
 import { CreateProductComponent } from './pages/create-product/create-product.component';
 import { CreateGameComponent } from './pages/create-game/create-game.component';
+import { CreatePostComponent } from './pages/create-post/create-post.component';
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -39,7 +40,8 @@ export const routes: Routes = [
   { path: 'subscription-page',component:SubscriptionPageComponent },
   {path:'create-plant',component: CreatePlantComponent},
   {path:'create-product',component: CreateProductComponent},
-  {path:'create-game',component:CreateGameComponent}
+  {path:'create-game',component:CreateGameComponent},
+  {path:'create-post',component:CreatePostComponent},
 
 ];
 @NgModule({

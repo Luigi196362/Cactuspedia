@@ -3,16 +3,17 @@ import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { StorageService } from '../../services/storage.service';
 import { Subscription } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dual-sidebars',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,CommonModule],
   templateUrl: './dual-sidebars.component.html',
   styleUrl: './dual-sidebars.component.css'
 })
 export class DualSidebarsComponent {
-  constructor(private user: UserService, private storageService: StorageService, private router: Router) { }
+  constructor(private userSevice: UserService, private storageService: StorageService, private router: Router) { }
   private graphqlSubscription: Subscription;
 
   token: string;
@@ -24,7 +25,7 @@ export class DualSidebarsComponent {
     if (this.token) {
       this.getPremium();
     } else {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/']);
     }
   }
 
@@ -52,7 +53,7 @@ export class DualSidebarsComponent {
 
     console.log("premium")
 
-    this.graphqlSubscription = this.user.getPremium(this.token)
+    this.graphqlSubscription = this.userSevice.getPremium(this.token)
       .subscribe(({ data, loading }) => {
         this.Premium = JSON.parse(JSON.stringify(data)).isPremium;
         console.log(this.Premium)
